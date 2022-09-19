@@ -2,24 +2,24 @@ package datastructure
 
 import "fmt"
 
-type Node struct {
+type SNode struct {
 	Data int
-	Next *Node
+	Next *SNode
 }
 
 type LinkedList struct {
-	Head   *Node
+	Head   *SNode
 	Length int
 }
 
-func (l *LinkedList) InsertFirst(n *Node) {
+func (l *LinkedList) InsertFirst(n *SNode) {
 	second := l.Head
 	l.Head = n
 	l.Head.Next = second
 	l.Length++
 }
 
-func (l *LinkedList) InsertLast(N *Node) int {
+func (l *LinkedList) InsertLast(N *SNode) int {
 	length := l.Length
 	data := l.Head
 	if length == 0 {
@@ -69,7 +69,7 @@ func (l *LinkedList) DeleteLast() int {
 	return l.Length
 }
 
-func (l *LinkedList) InsertAfter(N *Node, element int) int {
+func (l *LinkedList) InsertAfter(N *SNode, element int) int {
 	if element == 0 {
 		l.InsertFirst(N)
 		return l.Length
