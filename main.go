@@ -4,6 +4,9 @@ import (
 	"fmt"
 	link "golang-datastructure/datastructure"
 	multi "golang-datastructure/doublelinklist"
+	_queue "golang-datastructure/queue"
+
+	// queue "golang-datastructure/queue"
 	stack "golang-datastructure/stack"
 )
 
@@ -48,6 +51,12 @@ func main() {
 	stack.Push(1)
 	stack.Push(2)
 	stack.Pop()
-
 	fmt.Println(stack)
+
+	fmt.Println("Queue Theory")
+	queues := _queue.Queue{}
+	queues.Enqueu(1)
+	queues.Enqueu(2)
+	queues.Dequeue()
+	fmt.Println(queues)
 }
