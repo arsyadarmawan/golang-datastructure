@@ -4,6 +4,7 @@ import (
 	"fmt"
 	link "golang-datastructure/datastructure"
 	multi "golang-datastructure/doublelinklist"
+	stack "golang-datastructure/stack"
 )
 
 func main() {
@@ -42,15 +43,11 @@ func main() {
 	dataMulti.DeleteLast()
 	dataMulti.Print()
 
-	// 5,3,2
-	// element 1
-	// 1 5 3 2
-	// element 2
-	// 5 1 3 2
-	// element 3
-	// 5 3 1 2
+	fmt.Println("Stack Theory")
+	stack := stack.Stack{}
+	stack.Push(1)
+	stack.Push(2)
+	stack.Pop()
 
-	// Delete Before
-	// 8 5
-
+	fmt.Println(stack)
 }
