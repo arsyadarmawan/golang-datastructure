@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	// Linkedlist
+	fmt.Println("---Singlelinkedlist---")
 	linkedlist := link.LinkedList{}
 	node1 := &link.SNode{Data: 3}
 	node2 := &link.SNode{Data: 1}
@@ -22,17 +22,24 @@ func main() {
 	linkedlist.Print()
 
 	// Multiple Linklist
-	fmt.Println()
+	fmt.Println("----Multilinkedlist----")
 	dataMulti := multi.MultipleList{}
-	nodeM1 := &multi.MNode{Data: 2}
-	nodeM2 := &multi.MNode{Data: 3}
-	nodeM3 := &multi.MNode{Data: 5}
-	nodeM4 := &multi.MNode{Data: 1}
+	// nodeM5 := &multi.MNode{Data: 5}
+	nodeM5 := &multi.MNode{Data: 0}
+	nodeM4 := &multi.MNode{Data: 4}
+	nodeM3 := &multi.MNode{Data: 3}
+	nodeM2 := &multi.MNode{Data: 2}
+	nodeM1 := &multi.MNode{Data: 1}
 
-	dataMulti.Prepend(nodeM1)
-	dataMulti.Prepend(nodeM2)
-	dataMulti.Prepend(nodeM3)
-	dataMulti.InsertBefore(nodeM4, 4)
+	dataMulti.InsertFirst(nodeM1)
+	dataMulti.InsertFirst(nodeM2)
+	dataMulti.InsertFirst(nodeM3)
+	dataMulti.InsertFirst(nodeM4)
+
+	// dataMulti.InsertBefore(nodeM5, 2)
+	// dataMulti.DeleteBefore(3)
+	dataMulti.InsertLast(nodeM5)
+	dataMulti.DeleteLast()
 	dataMulti.Print()
 
 	// 5,3,2
@@ -42,5 +49,8 @@ func main() {
 	// 5 1 3 2
 	// element 3
 	// 5 3 1 2
+
+	// Delete Before
+	// 8 5
 
 }
