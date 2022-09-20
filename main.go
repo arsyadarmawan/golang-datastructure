@@ -5,6 +5,7 @@ import (
 	link "golang-datastructure/datastructure"
 	multi "golang-datastructure/doublelinklist"
 	_queue "golang-datastructure/queue"
+	tree "golang-datastructure/tree"
 
 	// queue "golang-datastructure/queue"
 	stack "golang-datastructure/stack"
@@ -53,10 +54,17 @@ func main() {
 	stack.Pop()
 	fmt.Println(stack)
 
-	fmt.Println("Queue Theory")
+	fmt.Println("--- Queue Theory ---")
 	queues := _queue.Queue{}
 	queues.Enqueu(1)
 	queues.Enqueu(2)
 	queues.Dequeue()
 	fmt.Println(queues)
+
+	fmt.Println("--- Trees ---")
+	trees := tree.Tree{Data: 100}
+	trees.Insert(10)
+	trees.Insert(200)
+	fmt.Println(trees.Search(200))
+	fmt.Println(trees)
 }
