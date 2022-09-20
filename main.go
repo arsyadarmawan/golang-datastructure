@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	multi "golang-datastructure/DoublepleLinkList"
 	link "golang-datastructure/datastructure"
+	multi "golang-datastructure/doublelinklist"
 )
 
 func main() {
