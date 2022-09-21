@@ -4,6 +4,7 @@ import (
 	"fmt"
 	link "golang-datastructure/datastructure"
 	multi "golang-datastructure/doublelinklist"
+	graph "golang-datastructure/graph"
 	_queue "golang-datastructure/queue"
 	tree "golang-datastructure/tree"
 
@@ -44,7 +45,7 @@ func main() {
 	// dataMulti.InsertBefore(nodeM5, 2)
 	// dataMulti.DeleteBefore(3)
 	dataMulti.InsertLast(nodeM5)
-	dataMulti.DeleteLast()
+	// dataMulti.DeleteLast()
 	dataMulti.Print()
 
 	fmt.Println("Stack Theory")
@@ -67,4 +68,17 @@ func main() {
 	trees.Insert(200)
 	fmt.Println(trees.Search(200))
 	fmt.Println(trees)
+
+	fmt.Println("--- Graph ---")
+	graphs := &graph.Graph{}
+	for i := 1; i <= 5; i++ {
+		graphs.AddVertex(i)
+	}
+	graphs.AddEdgge(1, 2)
+	graphs.AddEdgge(1, 2)
+	graphs.AddEdgge(2, 1)
+	graphs.AddEdgge(6, 1)
+
+	graphs.Print()
+
 }
